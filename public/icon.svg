@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit">
+  <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/>
+  <path d="M9 13a4.5 4.5 0 0 0 3-4.144"/>
+  <path d="M15.5 5H18"/>
+  <path d="M15.5 9H18"/>
+  <path d="M15.5 13H18"/>
+  <path d="M15.5 17H18"/>
+  <path d="M22 5h-4"/>
+  <path d="M22 9h-4"/>
+  <path d="M22 13h-4"/>
+  <path d="M22 17h-4"/>
+</svg>

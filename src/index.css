@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-jarvis-dark text-jarvis-text font-sans antialiased;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.15) 0%, transparent 50%),
+      linear-gradient(to bottom, #050a15, #02040a);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .jarvis-panel {
+    @apply bg-jarvis-panel border border-jarvis-border rounded-xl backdrop-blur-md shadow-glow transition-all duration-300;
+  }
+  
+  .jarvis-panel:hover {
+    @apply border-jarvis-blue shadow-glow-lg;
+  }
+  
+  .jarvis-button {
+    @apply px-4 py-2 bg-transparent border border-jarvis-blue text-jarvis-blue rounded-lg 
+           hover:bg-jarvis-blue hover:text-jarvis-dark transition-all duration-300 font-medium tracking-wide shadow-[0_0_10px_rgba(56,189,248,0.2)] hover:shadow-glow;
+  }
+
+  .jarvis-button-active {
+    @apply px-4 py-2 bg-jarvis-blue border border-jarvis-blue text-jarvis-dark rounded-lg 
+           font-medium tracking-wide shadow-glow;
+  }
+  
+  .checkbox-custom {
+    @apply w-5 h-5 rounded border border-jarvis-blue bg-transparent appearance-none cursor-pointer
+           checked:bg-jarvis-blue checked:border-jarvis-blue transition-colors flex items-center justify-center relative;
+  }
+  
+  .checkbox-custom:checked::after {
+    content: '';
+    @apply absolute w-1.5 h-2.5 border-r-2 border-b-2 border-jarvis-dark transform rotate-45 -translate-y-[2px];
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-jarvis-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-jarvis-border rounded-full hover:bg-jarvis-blue transition-colors;
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(56, 189, 248, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(56, 189, 248, 0.6); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
